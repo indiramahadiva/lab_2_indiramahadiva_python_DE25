@@ -1,4 +1,7 @@
+# We need this to get math.pi
 import math
+
+# This imports the parent blueprint.
 from shape import Shape
 
 """Circle class inherit from Shape.
