@@ -40,17 +40,17 @@ class Geometry(Shape):
     @property
     def perimeter(self) -> float:
         """Overrides the 2D 'perimeter' property."""
-        # Perimeter doesn't make sense for a 3D shapes.
+        # 3D Shapes dont have perimeter.
         raise NotImplementedError("Perimeter is not defined for a 3D shapes")
 
     def translate(self, dx: float, dy: float, dz: float = 0) -> None:
         """
         Overrides the 2D 'translate' method to include 'dz'.
         """
-        # 1. Call the parent (Shape) to handle dx and dy
+        # Call the parent (Shape) to handle dx and dy
         super().translate(dx, dy)
 
-        # 2. Handle the new dz translation
+        # Handle the new dz translation
         if not isinstance(dz, (int, float)):
             raise TypeError("dz must be numeric.")
         self._z += float(dz)
@@ -64,5 +64,5 @@ class Geometry(Shape):
 
         return (
             f"A 3D {type(self).__name__} centered at ({self._x}, {self._y}, {self._z}) "
-            f"with a volume of {volume_str}."
+            f"The volume is {volume_str}."
         )

@@ -1,13 +1,17 @@
+# Imports the testing framework
 import pytest
+
+# To get math.pi, To Use math.isclose()
 import math
+
+# Imports the class
 from circle import Circle
 
 # I import this to test inequality
 from rectangle import Rectangle
 
+
 # Test __init__
-
-
 def test_init_normal():
     """Tests the constructor with normal values."""
     c = Circle(x=1, y=2, radius=3)
@@ -25,8 +29,6 @@ def test_init_defaults():
 
 
 # Test Properties
-
-
 def test_properties():
     """Tests the area and perimeter properties."""
     c = Circle(radius=2)
@@ -36,8 +38,6 @@ def test_properties():
 
 
 # Test Operators
-
-
 def test_equality():
     """Tests the __eq__ (==) operator."""
     c1 = Circle(x=0, y=0, radius=5)
@@ -61,8 +61,6 @@ def test_comparisons():
 
 
 # Test Methods
-
-
 def test_translate():
     """Tests the translate method."""
     c = Circle(x=5, y=5)
@@ -80,8 +78,6 @@ def test_is_unit_circle():
 
 
 # Test Error Handling
-
-
 def test_error_handling():
     """
     Tests that the class correctly raises errors.

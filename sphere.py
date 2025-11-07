@@ -33,7 +33,7 @@ class Sphere(Geometry):
         """Calculates the surface area of the sphere."""
         return 4 * math.pi * (self._radius**2)
 
-    # Specific Operator Overloads
+    # Operator Overloads
 
     def __eq__(self, other: object) -> bool:
         """Checks for equality (==)."""

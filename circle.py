@@ -1,4 +1,4 @@
-# We need this to get math.pi
+# I need this to get math.pi and I use math.isclose() for safe comparisons
 import math
 
 # This imports the parent blueprint.
@@ -19,7 +19,7 @@ class Circle(Shape):
             raise TypeError("Radius must be numeric.")
         if radius <= 0:
             raise ValueError("Radius must be positive.")
-
+        # Stores the radius data.
         self._radius = float(radius)
 
     @property

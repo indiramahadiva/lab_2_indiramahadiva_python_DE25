@@ -1,6 +1,6 @@
 # for comparing float(equality) => math.isclose()
 import math
-from geometry import Geometry  # Import our 3D blueprint
+from geometry import Geometry  # Import 3D blueprint (Geometry)
 
 
 class Cube(Geometry):
@@ -13,7 +13,7 @@ class Cube(Geometry):
         # Call the parent (Geometry) to set up x, y, and z
         super().__init__(x, y, z)
 
-        # Handle the Cube-specific attribute: side
+        # Handle the Cube attribute: side
         if not isinstance(side, (int, float)):
             raise TypeError("Side must be numeric.")
         if side <= 0:
@@ -32,7 +32,6 @@ class Cube(Geometry):
         return 6 * (self._side**2)
 
     # Operator Overloads
-
     def __eq__(self, other: object) -> bool:
         """Checks for equality (==)."""
         # Two cubes are equal if their sides are the same.

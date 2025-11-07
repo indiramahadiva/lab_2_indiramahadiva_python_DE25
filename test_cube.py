@@ -86,13 +86,13 @@ def test_translate():
 def test_error_handling():
     """
     Tests that the class correctly raises errors.
-    Test TypeError for WRONG inputs.
+    Test TypeError for wrong inputs.
     """
     with pytest.raises(TypeError):
         Cube(z="a")  # Wrong z
 
     with pytest.raises(TypeError):
-        Cube(side="10")  # Wrong side
+        Cube(side="10")  # wrong side
 
     with pytest.raises(TypeError):
         c = Cube()
